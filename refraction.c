@@ -13,3 +13,10 @@
  #include<stdio.h>
  #include<stdlib.h>
  #include<math.h>
+ 
+ int main() {
+	 
+	 double angleOfIncidence, indexOfRefraction, angleOfRefraction;
+	 // The angle of incidence is the initial angle, the angle of refraction is the
+	 // resultant, and we don't need an initial index because we assume it is air (1)
+ }
