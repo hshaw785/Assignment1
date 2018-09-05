@@ -16,7 +16,7 @@
  
  int main() {
 	 
-	 double angleOfIncidence, indexOfRefraction, angleOfRefraction;
+	 double angleOfIncidence, indexOfRefraction, angleOfRefraction, radAngleOfRefraction, radAngleOfIncidence;
 	 
 	 // The angle of incidence is the initial angle, the angle of refraction is the
 	 // resultant, and we don't need an initial index because we assume it is air (1)
@@ -26,9 +26,17 @@
 	 printf("Please provide the new index of refraction: \n");
 	 scanf("%lf", &indexOfRefraction);
 	 
-	 angleOfRefraction = asin( sin(angleOfIncidence) / indexOfRefraction );
+	 // The following changes the angle of incidence from degrees to radians
 	 
-	 printf("Angle of Incidence: %lf degrees\n", %angleOfIncidence);
-	 printf("Index of refraction: %lf\n", %indexOfRefraction);
-	 printf("Angle of refraction: %lf degrees\n", %angleOfRefraction);
+	 radAngleOfIncidence = (angleOfIncidence / 180) * M_PI;
+	 
+	 radAngleOfRefraction = asin( sin(radAngleOfIncidence) / indexOfRefraction );
+	 
+	 // The following changes the angle of refraction from radians to degrees
+	 
+	 angleOfRefraction = (radAngleOfRefraction / M_PI) * 180;
+	 
+	 printf("Angle of Incidence: %lf degrees\n", angleOfIncidence);
+	 printf("Index of refraction: %lf\n", indexOfRefraction);
+	 printf("Angle of refraction: %lf degrees\n", angleOfRefraction);
  }
