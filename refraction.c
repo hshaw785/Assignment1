@@ -9,34 +9,41 @@
  * angle of incidence.
  *
  */
- 
+
  #include<stdio.h>
  #include<stdlib.h>
  #include<math.h>
- 
+
  int main() {
-	 
+
 	 double angleOfIncidence, indexOfRefraction, angleOfRefraction, radAngleOfRefraction, radAngleOfIncidence;
-	 
+
 	 // The angle of incidence is the initial angle, the angle of refraction is the
 	 // resultant, and we don't need an initial index because we assume it is air (1)
-	 
+
 	 printf("Please provide the angle of incidence: \n");
 	 scanf("%lf", &angleOfIncidence);
-	 printf("Please provide the new index of refraction: \n");
-	 scanf("%lf", &indexOfRefraction);
-	 
-	 // The following changes the angle of incidence from degrees to radians
-	 
-	 radAngleOfIncidence = (angleOfIncidence / 180) * M_PI;
-	 
-	 radAngleOfRefraction = asin( sin(radAngleOfIncidence) / indexOfRefraction );
-	 
-	 // The following changes the angle of refraction from radians to degrees
-	 
-	 angleOfRefraction = (radAngleOfRefraction / M_PI) * 180;
-	 
-	 printf("Angle of Incidence: %lf degrees\n", angleOfIncidence);
-	 printf("Index of refraction: %lf\n", indexOfRefraction);
-	 printf("Angle of refraction: %lf degrees\n", angleOfRefraction);
+
+   if(angleOfIncidence < 0 || angleOfIncidence > 360){
+     printf("ERROR: Your input angle, %lf, is not a valid.");
+   }else{
+	   printf("Please provide the new index of refraction: \n");
+	   scanf("%lf", &indexOfRefraction);
+
+     // Check to see if the input is valid
+
+	   // The following changes the angle of incidence from degrees to radians
+
+	   radAngleOfIncidence = (angleOfIncidence / 180) * M_PI;
+
+	   radAngleOfRefraction = asin( sin(radAngleOfIncidence) / indexOfRefraction );
+
+	   // The following changes the angle of refraction from radians to degrees
+
+	   angleOfRefraction = (radAngleOfRefraction / M_PI) * 180;
+
+	   printf("Angle of Incidence: %lf degrees\n", angleOfIncidence);
+	   printf("Index of refraction: %lf\n", indexOfRefraction);
+	   printf("Angle of refraction: %lf degrees\n", angleOfRefraction);
+   }
  }
