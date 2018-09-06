@@ -38,5 +38,8 @@
      printf("Final Value:\t %lf\n", finalValue);
      printf("Years:\t %lf\n", timePassed);
      printf("Annualized Rate of Return: %lf%\n", rateOfReturn);
+   }else{
+     printf("ERROR: One or more of your input values are not valid.");
+     exit(1);
    }
  }
