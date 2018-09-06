@@ -28,7 +28,7 @@
 
    if(angleOfIncidence < 0 || angleOfIncidence > 360){
      printf("ERROR: Your input angle, %lf, is not a valid. Please provide an angle\n");
-     printf("between 0 and 360 degrees.")
+     printf("between 0 and 360 degrees.");
    }else{
 	   printf("Please provide the new index of refraction: \n");
 	   scanf("%lf", &indexOfRefraction);
