@@ -34,8 +34,8 @@
 
      rateOfReturn = 100 * (pow( (finalValue / initialValue) , (1 / timePassed) ) - 1);
 
-     printf("Initial Value:\t %.2lf\n", initialValue);
-     printf("Final Value:\t %.2lf\n", finalValue);
+     printf("Initial Value:\t $%.2lf\n", initialValue);
+     printf("Final Value:\t $%.2lf\n", finalValue);
      printf("Years:\t %.2lf\n", timePassed);
      printf("Annualized Rate of Return: %.3lf%\n", rateOfReturn);
    }else{
