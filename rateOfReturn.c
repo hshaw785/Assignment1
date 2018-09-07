@@ -34,10 +34,10 @@
 
      rateOfReturn = 100 * (pow( (finalValue / initialValue) , (1 / timePassed) ) - 1);
 
-     printf("Initial Value:\t %lf\n", initialValue);
-     printf("Final Value:\t %lf\n", finalValue);
-     printf("Years:\t %lf\n", timePassed);
-     printf("Annualized Rate of Return: %lf%\n", rateOfReturn);
+     printf("Initial Value:\t %.2lf\n", initialValue);
+     printf("Final Value:\t %.2lf\n", finalValue);
+     printf("Years:\t %.2lf\n", timePassed);
+     printf("Annualized Rate of Return: %.3lf%\n", rateOfReturn);
    }else{
      printf("ERROR: One or more of your input values are not valid.");
      exit(1);
