@@ -1,4 +1,4 @@
-# Assignment1.0
+# Assignment1
 
 Author: Haley Shaw
 
